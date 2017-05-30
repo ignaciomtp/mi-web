@@ -1,0 +1,23 @@
+
+.desc{
+	font-family: "sofia-pro", Helvetica, Arial, sans-serif !important;
+    font-style: normal;
+    font-weight: 300;
+	
+}
+
+.intro-heading{
+	color:#58ACFA;
+}
+
+.navbar-custom{
+	background-color: rgba(0,0,0,.5);
+}
+
+@media (min-width: 768px){
+
+section{
+	padding:50px 0;
+}
+
+}
