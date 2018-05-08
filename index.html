@@ -294,25 +294,25 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" action="mailto:ignaciomtp@gmail.com" method="post" novalidate>
+                    <form name="sentMessage" id="contactForm" action="https://formspree.io/ignaciomtp@gmail.com" method="post" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nombre *" id="name" required data-validation-required-message="Introduce tu nombre.">
+                                    <input type="text" class="form-control" placeholder="Nombre *" id="name" name="name" required data-validation-required-message="Introduce tu nombre.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email *" id="email" required data-validation-required-message="Introduce tu dirección de correo electrónico.">
+                                    <input type="email" class="form-control" placeholder="Email *" id="email" name="email" required data-validation-required-message="Introduce tu dirección de correo electrónico.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Teléfono *" id="phone" required data-validation-required-message="Introduce tu teléfono (si quieres).">
+                                    <input type="tel" class="form-control" placeholder="Teléfono *" id="phone" name="phone"  data-validation-required-message="Introduce tu teléfono (si quieres).">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Mensaje *" id="message" required data-validation-required-message="Introduce tu mensaje."></textarea>
+                                    <textarea class="form-control" placeholder="Mensaje *" id="message" name="message" required data-validation-required-message="Introduce tu mensaje."></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
