@@ -294,25 +294,25 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" action="https://formspree.io/ignaciomtp@gmail.com" method="post" novalidate>
+                    <form name="sentMessage" id="formulario" action="" method="post" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nombre *" id="name" name="name" required data-validation-required-message="Introduce tu nombre.">
+                                    <input type="text" class="form-control" placeholder="Nombre *" id="nombre" required data-validation-required-message="Introduce tu nombre.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email *" id="email" name="email" required data-validation-required-message="Introduce tu dirección de correo electrónico.">
+                                    <input type="email" class="form-control" placeholder="Email *" id="correo" required data-validation-required-message="Introduce tu dirección de correo electrónico.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Teléfono *" id="phone" name="phone"  data-validation-required-message="Introduce tu teléfono (si quieres).">
+                                    <input type="tel" class="form-control" placeholder="Teléfono " id="telefono"  data-validation-required-message="Introduce tu teléfono (si quieres).">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Mensaje *" id="message" name="message" required data-validation-required-message="Introduce tu mensaje."></textarea>
+                                    <textarea class="form-control" placeholder="Mensaje *" id="mensaje" required data-validation-required-message="Introduce tu mensaje."></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -535,6 +535,34 @@
         </div>
     </div>
 
+
+            <!-- Modal -->
+              <div class="modal fade" id="gracias" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog"> 
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <h3 class="modal-title thx">Mensaje enviado</h3>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>
+                            Gracias por contactar. Te contestaré a la mayor brevedad.
+                        </p>
+    
+                    </div>
+                    <div class="modal-footer">
+                    <!-- Button trigger modal 3-->
+                   
+                      <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
+                      
+                    </div>
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div>
+            
+            
+            <!-- fin modal -->
+
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -550,6 +578,45 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+    <script>
+            $("#formulario").submit(function(event) {
+              enviar();
+              event.preventDefault();
+            });
+            
+            function enviar(){
+                var nombre = $("#nombre").val();
+               
+                var correo = $("#correo").val();
+                var telefono = $("#telefono").val();
+                var mensaje = $("#mensaje").val();
+                
+                var datos = {
+                    "nombre" : nombre,
+                    "correo" : correo,
+                    "telefono" : telefono,
+                    "mensaje" : mensaje
+                    
+                };
+                
+                $.ajax({
+                    data: datos,
+                    url: 'http://vianadoprior.club/procesar2.php',
+                    type: 'post'
+                });
+                
+                $('#gracias').modal('show');
+                
+                $("#nombre").val("");
+               
+                $("#correo").val("");
+                $("#telefono").val("");
+                $("#mensaje").val("");
+                
+            }
+
+    </script>
 
 </body>
 
