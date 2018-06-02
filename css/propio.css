@@ -14,6 +14,16 @@
 	background-color: rgba(0,0,0,.5);
 }
 
+
+#portfolio .portfolio-item {
+  height: 400px;
+}
+
+.portfolio-caption p{
+  line-height: 1.2;
+  margin-top: 15px !important;
+}
+
 @media (min-width: 768px){
 
 section{
