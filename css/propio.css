@@ -17,11 +17,59 @@
 
 #portfolio .portfolio-item {
   height: 400px;
+  margin:40px auto;
+
 }
 
 .portfolio-caption p{
   line-height: 1.2;
   margin-top: 15px !important;
+}
+
+.portfolio-modal .modal-body a{
+    color:#337ab7;
+}
+
+.section-subheading{
+  text-transform: uppercase !important;
+}
+
+.tx-pres{
+  margin: -40px auto 40px auto;
+  font-size: 16px;
+  width: 70%;
+  font-weight: 400;
+}
+
+
+.legal{
+  background-color: rgba(0,0,0,.5);
+  margin:150px auto 20px auto;
+  color: #FFF;
+  font-family: arial, sans-serif;
+  text-align: left;
+  padding: 20px;
+}
+
+.desc_legal{
+  font-size: 1.5em;
+  line-height: 1.3em;
+  font-weight: normal;
+  
+  text-align: justify;
+}
+
+.legal p{
+  margin-bottom: 20px;
+}
+
+.legal h1, .legal h2, .legal h3, .legal h4{
+  color:#fed136;
+}
+
+footer{
+  background-color: #000;
+  color:#CCC;
 }
 
 @media (min-width: 768px){
